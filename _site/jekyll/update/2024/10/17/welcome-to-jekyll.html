@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Clément Rambour</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+.column {
+  float: left;
+  /*padding: 10px;*/
+  }
+.left {
+  width: 20%;
+}
+
+.right {
+  width: 75%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  
+.w3-button:hover {
+    color: #CCC !important;
+    background-color: #000 !important;
+}
+.imgbox {
+        display: grid;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100vh;
+    width: 50%;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+.topr {
+    position : absolute;
+    width: 10%;
+    max-height: 100vh;
+    width: 10%;
+    padding: 2vh;
+    height: 100%;
+}
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+    z-index: 3;
+    width: 250px;
+    top: 73px;
+    bottom: 0;
+    height: inherit;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <h3 class="w3-bar-item w3-button w3-theme-l1" style="background-color: #000000 !important;"><a href="./index.html" style="text-decoration: none;" >Clément Rambour</a></h3>
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+    <div class="imgbox">
+        <img src="img/picture.png" alt="picture" class="center">
+        <a href="index.html" class="w3-bar-item w3-button w3-hover-black" href="#">Home</a>
+        <a href="research.html" class="w3-bar-item w3-button w3-hover-black" href="#">Research</a>
+        <a href="publications.html" class="w3-bar-item w3-button w3-hover-black" href="#">Publications</a>
+        <a href="teaching.html" class="w3-bar-item w3-button w3-hover-black" href="#">Teaching</a>
+        <a href="job.html" class="w3-bar-item w3-button w3-hover-black" href="#">Open positions</a>
+        <a  href="https://www.sorbonne-universite.fr/en"><img src="img/LOGO_SU_HORIZ_SEUL_CMJN.jpg" alt="Sorbonne University" class="center" style="margin-top: 20vh;"></a>
+        <a  href="https://www.isir.upmc.fr/?lang=en"><img src="img/isir-trans.png" alt="ISIR" class="center"></a>
+        <!-- <a  href="https://www.cnam.fr/"><img src="lecnamlogo.jpg" alt="le_cnam" class="center" style="margin-top: 20vh;"></a>
+        <a  href="https://cedric.cnam.fr/"><img src="cedric.jpg" alt="picture" class="center"></a> -->
+    </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+<!-- Main content -->
+<div class="w3-main" style="margin-left:250px">
+    <div class="w3-row w3-padding-64">
+        <div class="w3-twothird w3-container">
+        </div>
+    </div>  
+ <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Welcome to Jekyll!</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2024-10-17T10:38:09+02:00" itemprop="datePublished">Oct 17, 2024
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>You’ll find this post in your <code class="language-plaintext highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="language-plaintext highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+
+<p>Jekyll requires blog post files to be named according to the following format:</p>
+
+<p><code class="language-plaintext highlighter-rouge">YEAR-MONTH-DAY-title.MARKUP</code></p>
+
+<p>Where <code class="language-plaintext highlighter-rouge">YEAR</code> is a four-digit number, <code class="language-plaintext highlighter-rouge">MONTH</code> and <code class="language-plaintext highlighter-rouge">DAY</code> are both two-digit numbers, and <code class="language-plaintext highlighter-rouge">MARKUP</code> is the file extension representing the format used in the file. After that, include the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+
+<p>Jekyll also offers powerful support for code snippets:</p>
+
+<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
+  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
+<span class="k">end</span>
+<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
+<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+
+<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+
+
+  </div><a class="u-url" href="/jekyll/update/2024/10/17/welcome-to-jekyll.html" hidden></a>
+</article>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <h3 class="w3-bar-item w3-button w3-theme-l1" style="background-color: #000000 !important;"><a href="./index.html" style="text-decoration: none;" >Clément Rambour</a></h3>
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+    <div class="imgbox">
+        <img src="img/picture.png" alt="picture" class="center">
+        <a href="index.html" class="w3-bar-item w3-button w3-hover-black" href="#">Home</a>
+        <a href="research.html" class="w3-bar-item w3-button w3-hover-black" href="#">Research</a>
+        <a href="publications.html" class="w3-bar-item w3-button w3-hover-black" href="#">Publications</a>
+        <a href="teaching.html" class="w3-bar-item w3-button w3-hover-black" href="#">Teaching</a>
+        <a href="job.html" class="w3-bar-item w3-button w3-hover-black" href="#">Open positions</a>
+        <a  href="https://www.sorbonne-universite.fr/en"><img src="img/LOGO_SU_HORIZ_SEUL_CMJN.jpg" alt="Sorbonne University" class="center" style="margin-top: 20vh;"></a>
+        <a  href="https://www.isir.upmc.fr/?lang=en"><img src="img/isir-trans.png" alt="ISIR" class="center"></a>
+        <!-- <a  href="https://www.cnam.fr/"><img src="lecnamlogo.jpg" alt="le_cnam" class="center" style="margin-top: 20vh;"></a>
+        <a  href="https://cedric.cnam.fr/"><img src="cedric.jpg" alt="picture" class="center"></a> -->
+    </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>

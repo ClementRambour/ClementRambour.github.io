@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Clément Rambour</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+.column {
+  float: left;
+  /*padding: 10px;*/
+  }
+.left {
+  width: 20%;
+}
+
+.right {
+  width: 75%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  
+.w3-button:hover {
+    color: #CCC !important;
+    background-color: #000 !important;
+}
+.imgbox {
+        display: grid;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100vh;
+    width: 50%;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+.topr {
+    position : absolute;
+    width: 10%;
+    max-height: 100vh;
+    width: 10%;
+    padding: 2vh;
+    height: 100%;
+}
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+    z-index: 3;
+    width: 250px;
+    top: 73px;
+    bottom: 0;
+    height: inherit;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+{% include navigation.html %}
+<!-- Main content -->
+<div class="w3-main" style="margin-left:250px">
+    <div class="w3-row w3-padding-64">
+        <div class="w3-twothird w3-container">
+        </div>
+    </div>  
+ {{ content }}
+</div>
+</body>
+</html>

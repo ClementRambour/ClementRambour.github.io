@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Clément Rambour</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+.column {
+  float: left;
+  /*padding: 10px;*/
+  }
+.left {
+  width: 20%;
+}
+
+.right {
+  width: 75%;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+  
+.w3-button:hover {
+    color: #CCC !important;
+    background-color: #000 !important;
+}
+.imgbox {
+        display: grid;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+    max-height: 100vh;
+    width: 50%;
+    margin-bottom: 25px;
+    margin-top: 10px;
+}
+.topr {
+    position : absolute;
+    width: 10%;
+    max-height: 100vh;
+    width: 10%;
+    padding: 2vh;
+    height: 100%;
+}
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+    z-index: 3;
+    width: 250px;
+    top: 73px;
+    bottom: 0;
+    height: inherit;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <h3 class="w3-bar-item w3-button w3-theme-l1" style="background-color: #000000 !important;"><a href="./index.html" style="text-decoration: none;" >Clément Rambour</a></h3>
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+    <div class="imgbox">
+        <img src="img/picture.png" alt="picture" class="center">
+        <a href="index.html" class="w3-bar-item w3-button w3-hover-black" href="#">Home</a>
+        <a href="research.html" class="w3-bar-item w3-button w3-hover-black" href="#">Research</a>
+        <a href="publications.html" class="w3-bar-item w3-button w3-hover-black" href="#">Publications</a>
+        <a href="teaching.html" class="w3-bar-item w3-button w3-hover-black" href="#">Teaching</a>
+        <a href="job.html" class="w3-bar-item w3-button w3-hover-black" href="#">Open positions</a>
+        <a  href="https://www.sorbonne-universite.fr/en"><img src="img/LOGO_SU_HORIZ_SEUL_CMJN.jpg" alt="Sorbonne University" class="center" style="margin-top: 20vh;"></a>
+        <a  href="https://www.isir.upmc.fr/?lang=en"><img src="img/isir-trans.png" alt="ISIR" class="center"></a>
+        <!-- <a  href="https://www.cnam.fr/"><img src="lecnamlogo.jpg" alt="le_cnam" class="center" style="margin-top: 20vh;"></a>
+        <a  href="https://cedric.cnam.fr/"><img src="cedric.jpg" alt="picture" class="center"></a> -->
+    </div>
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+<!-- Main content -->
+<div class="w3-main" style="margin-left:250px">
+    <div class="w3-row w3-padding-64">
+        <div class="w3-twothird w3-container">
+        </div>
+    </div>  
+ <div class="w3-row">
+    <div class="w3-twothird w3-container">
+        <h2 class="w3-text-teal">Research Team</h2>
+        <p> I am a member of the <a href=https://www.isir.upmc.fr/teams/mlia/presentation-mlia/?lang=en>MLIA Team</a>, <a href=https://www.isir.upmc.fr/?lang=en>ISIR Lab</a></p>
+        <!-- <p> I am a member of the <a href=https://cedric.cnam.fr/lab/equipes/vertigo-en>Vertigo Team</a>, <a href=https://cedric.cnam.fr/lab/welcome>CEDRIC Lab</a></p> -->
+        <h3 class="w3-text-teal">Post-doctoral researchers</h3>
+        <div class="row">
+          <div class="w3-third"><p><b>2022-2023</b></p></div>
+          <div class="w3-twothird"><p>Denis Coquenet, Semantic segmentation with transformers and GNN, with Nicolas Thome (ISIR) and Raphaël Fournier (Cnam)</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="w3-third"><p><b>2022-2023</b></p></div>
+          <div class="w3-twothird"><p>Emanuele Dalsasso, Uncertainty in SAR image segmentation, with Nicolas Thome (ISIR)</p>
+          </div>
+        </div>
+        <h3 class="w3-text-teal">PhD students</h3>
+        <!-- <div class="row">
+          <div class="w3-third"><p><b>2023-</b></p></div>
+          <div class="w3-twothird"><p>Jeremie Stym Popper, Few-Shot GAN pour la compression sémantique de vidéos, with Nicolas Thome (ISIR) and Jean-Emmanuel Haugeard (Thales)</p>
+          </div>
+        </div> -->
+        <div class="row">
+            <div class="w3-third"><p><b>2024-</b></p></div>
+            <div class="w3-twothird"><p>Margot Boyer, Semidefinite Programming for Adversarial Robustness, with Amélie Lambert (Cnam) and Zakarie Alès (Cnam - ENSTA) </p>
+            </div>
+          </div>
+        <div class="row">
+          <div class="w3-third"><p><b>2024-</b></p></div>
+          <div class="w3-twothird"><p>Thérèse Tisseau des Escotais, Video editing for advanced driver-assistance system validation, with Arnaud Breloy (Cnam) and Bretrand Leroy (Ampere Group)</p>
+          </div>
+        </div>
+        <!-- <div class="row">
+          <div class="w3-third"><p><b>2022-</b></p></div>
+          <div class="w3-twothird"><p>Paul Couairon, Few-Shot GAN pour la compression sémantique de vidéos, with Nicolas Thome (ISIR) and Jean-Emmanuel Haugeard (Thales)</p>
+          </div>
+        </div> -->
+        <div class="row">
+          <div class="w3-third"><p><b>2021-</b></p></div>
+          <div class="w3-twothird"><p>Marc Lafon, Uncertainty for active learning, with Nicolas Thome (ISIR)</p>
+          </div>
+        </div>
+        <div class="row">
+            <div class="w3-third"><p><b>2021-2024</b></p></div>
+            <div class="w3-twothird"><p>Elias Ramzi, deep learning for visual search in large logos databases, with Nicolas Thome (ISIR), Nicolas Audebert (IGN) and Xavier Bitot (Coexya Group)</p>
+            </div>
+        </div>
+        <div class="row">
+          <div class="w3-third"><p><b>2020-2023</b></p></div>
+          <div class="w3-twothird"><p>Loic Themyr, 3D Ultra-Sound image segmentation, with Nicolas Thome (ISIR) and Toby Collins (IRCAD)</p>
+          </div>
+        </div>
+        <h3 class="w3-text-teal">MSc. students</h3>
+    <div class="row">
+          <div class="w3-third"><p><b>2023</b></p></div>
+          <div class="w3-twothird"><p>Richard Wilouwou (MSC Optimization at University Paris-Saclay). Internship on robustness for deep network</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="w3-third"><p><b>2022</b></p></div>
+          <div class="w3-twothird"><p>Zakariae El Asri (MSC Artificial Intelligence at Ecole CentraleSupélec). Internship on model based reinforcement learning guided by phyisical knowledge</p>
+          </div>
+      </div>
+        <div class="row">
+            <div class="w3-third"><p><b>2021</b></p></div>
+            <div class="w3-twothird"><p>Raphaël Boige (master Data Science, Télécom Paris/École Polytechnique). Internship on learning agents with diversified behaviours for video games by reinforcement</p>
+            </div>
+        </div>
+        <div class="row">
+            <div class="w3-third"><p><b>2021</b></p></div>
+            <div class="w3-twothird"><p>João Pedro Araújo Ferreira Campos (ENSTA Paris). Internship on spatially-equivariant representation learning for remote sensing and medical images.</p>
+            </div>
+        </div>
+    </div>
+    <div class="w3-row w3-padding-64">
+        <div class="w3-twothird w3-container">
+        </div>
+    </div>
+    <div class="w3-twothird w3-container">
+        <h2 class="w3-text-teal">Projects</h2>
+        <p><b>MERCATO</b> (ANR JCJC 2025-2029), Multimodal Uncertainty Quantification for Earth Observation <b>Principal Investigator</b></p>
+    </div>
+    <div class="w3-twothird w3-container">
+        <h2 class="w3-text-teal"></h2>
+        <p><b>ORION</b> (internal CEDRIC project) : robustness for deep models with Amélie Lambert and Zacharie Ales</p>
+    </div>
+    <div class="w3-twothird w3-container">
+        <h2 class="w3-text-teal"></h2>
+        <p> <b>ASTRAL</b> (ANR ASTRID 2021-2024), Machine learning for SAR imagery. Consortium: LTCI (Telecom Paris), Laboratoire Hubert-Curien (Telecom Saint-Etienne) and CEDRIC (Cnam) <b>CEDRIC coordinator</b></p>
+    </div>
+    <div class="w3-twothird w3-container">
+      <h2 class="w3-text-teal">Former Projects</h2>
+      <p> <b>ALYS</b> (ANR ASTRID 2017-2020), SAR tomography in urban areas, see <a href="https://alys.wp.imt.fr">ALYS website</a></p>
+    </div>
+    <div class="w3-twothird w3-container">
+        <h2 class="w3-text-teal">Dataset</h2>
+        <p>Improving on the 2019 MediaEval Multimedia Satellite Task, we designed and released in 2020 <a href="https://clmrmb.github.io/SEN12-FLOOD/">SEN12-FLOOD</a>, a multimodal SAR/multispectral dataset (Sentinel 1 and 2) for flood event detection in remote sensing time series.</p>
+      </div>
+
+</div>
+</body>
+</html>
