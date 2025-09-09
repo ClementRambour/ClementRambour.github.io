@@ -64,8 +64,6 @@
 #         uses: actions/deploy-pages@v4
 
 
-
-# Sample workflow for building and deploying a Jekyll site to GitHub Pages
 name: Deploy Jekyll site to Pages
 
 on:
@@ -90,24 +88,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      # Native build deps for gems like ffi, protobuf, sass-embedded, etc.
+      # Needed for native extensions like ffi / google-protobuf / sass-embedded
       - name: Install build tools
         run: sudo apt-get update && sudo apt-get install -y build-essential pkg-config libffi-dev
 
-      # Ruby with Bundler (disable bundler-cache for now so we can run custom steps)
       - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1'
-          bundler-cache: false
+          ruby-version: '3.1.4'    # pick the exact 3.1.x your Gemfile accepts; 3.1.4 is broadly safe
+          rubygems: 'latest'       # avoid old RubyGems bugs that can make `gem` exit 1
+          bundler: 'latest'        # ensure a modern Bundler
+          bundler-cache: false     # we’ll install manually (verbose) to surface the real error
 
-      # If the lockfile was created on macOS/Windows, make sure Linux platform is present
+      # If Gemfile.lock was created on macOS/Windows, make sure Linux platform is present
       - name: Ensure Linux platform in lockfile
-        run: |
-          bundle lock --add-platform x86_64-linux || true
+        run: bundle lock --add-platform x86_64-linux || true
 
-      # Install gems with logs (easier to diagnose if it fails)
-      - name: Bundle install (verbose)
+      - name: Print env info (helps debugging)
+        run: |
+          ruby -v
+          gem -v
+          bundle -v
+          bundle env
+
+      - name: Install gems (verbose)
         run: |
           bundle config set path vendor/bundle
           bundle install --jobs 4 --retry 3 --verbose
